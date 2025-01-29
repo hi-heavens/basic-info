@@ -1,8 +1,10 @@
+const cors = require("cors");
 const express = require("express");
 const personRoute = require("./person/person.route");
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1", personRoute);
