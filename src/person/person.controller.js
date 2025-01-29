@@ -3,8 +3,7 @@ const person = require("./person.model");
 exports.getPersonDetails = (req, res) => {
   try {
     return res.status(200).json({
-      status: true,
-      person,
+      ...person,
     });
   } catch (err) {
     console.error(err);
